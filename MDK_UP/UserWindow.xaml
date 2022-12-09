@@ -28,28 +28,25 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="130" />
-            <ColumnDefinition Width="28*" />
-            <ColumnDefinition Width="177*"/>
-            <ColumnDefinition Width="179*"/>
+            <ColumnDefinition Width="500" />
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Фамилия" Margin="8,8,8,8" />
-        <TextBlock Text="Имя" Grid.Row="1" Margin="8,8,8,8" />
-        <TextBlock Text="Отчество" Grid.Row="2" Margin="8,8,8,8"/>
-        <TextBlock Text="Дата Рождения" Grid.Row="3" Margin="8,8,8,8" />
-        <TextBlock Text="Номер телефона" Grid.Row="4" Margin="8,8,8,8" />
-        <TextBlock Text="Отдел" Grid.Row="5" Margin="8,8,8,8" />
+        <TextBlock Text="Фамилия" Margin="8,8,378,8" />
+        <TextBlock Text="Имя" Grid.Row="1" Margin="8,8,378,8" />
+        <TextBlock Text="Отчество" Grid.Row="2" Margin="8,8,378,8"/>
+        <TextBlock Text="Дата Рождения" Grid.Row="3" Margin="8,8,378,8" />
+        <TextBlock Text="Номер телефона" Grid.Row="4" Margin="8,8,378,8" />
+        <TextBlock Text="Отдел" Grid.Row="5" Margin="8,8,378,8" />
 
-        <TextBox Text="{Binding Surname}" Grid.Column="1" Grid.ColumnSpan="3" Margin="8,8,8,8" />
-        <TextBox Text="{Binding Name}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Margin="8,8,8,8" />
-        <TextBox Text="{Binding Patronymic}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Margin="8,8,8,8" />
-        <TextBox Text="{Binding Data_birth}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Margin="8,8,8,8" />
-        <TextBox Text="{Binding Telephone_number}" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" Margin="8,8,8,8" />
-        <TextBox Text="{Binding Department}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" Margin="8,8,8,8" />
+        <TextBox Text="{Binding Surname}" Margin="138,8,8,8" HorizontalAlignment="Center" Width="354" />
+        <TextBox Text="{Binding Name}" Grid.Row="1" Margin="138,8,8,8" HorizontalAlignment="Center" Width="354" />
+        <TextBox Text="{Binding Patronymic}" Grid.Row="2" Margin="138,8,8,8" HorizontalAlignment="Center" Width="354" />
+        <TextBox Text="{Binding Data_birth}" Grid.Row="3" Margin="138,8,8,8" HorizontalAlignment="Center" Width="354" />
+        <TextBox Text="{Binding Telephone_number}" Grid.Row="4" Margin="138,8,8,8" HorizontalAlignment="Center" Width="354" />
+        <TextBox Text="{Binding Department}" Grid.Row="5" Margin="138,8,8,8" HorizontalAlignment="Center" Width="354" />
 
-        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="6" Grid.Column="2" Margin="88,0,0,0" Grid.ColumnSpan="2">
-            <Button IsDefault="True" Click="Accept_Click" RenderTransformOrigin="0.508,1.429" >OK</Button>
-            <Button IsCancel="True" >Отмена</Button>
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Margin="174,55,174,0" Grid.RowSpan="2">
+            <Button IsDefault="True" Click="Accept_Click" RenderTransformOrigin="0.508,1.429" Content="OK" />
+            <Button IsCancel="True" Content="Отмена" />
         </StackPanel>
     </Grid>
 </Window>

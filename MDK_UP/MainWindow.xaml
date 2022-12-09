@@ -26,8 +26,8 @@
             <Button Content="Добавить" Margin="10" Click="Add_Click" />
             <Button Content="Изменить" Margin="10" Click="Edit_Click"  />
             <Button Content="Удалить" Margin="10" Click="Delete_Click"  />
-            <Button Content="Импортировать в excel" Margin="10" Click="Export"  />
-            <Button Content="Импортировать в json" Margin="10" Click="Export"  />
+            <Button Content="Экспорт в excel" Margin="10"   />
+            <Button Content="Экспорт в json" Margin="10"   />
         </StackPanel>
     </Grid>
 </Window>
