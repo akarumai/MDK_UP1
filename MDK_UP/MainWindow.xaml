@@ -2,32 +2,32 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:col="clr-namespace:System.Collections;assembly=System.Runtime"
         mc:Ignorable="d"
-         Title="MainWindow" Height="600" Width="1200">
+         Title="MainWindow" Height="400" Width="541">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
-        <ListBox x:Name="usersList" ItemsSource="{Binding}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
+        <DataGrid x:Name="usersList" ItemsSource="{Binding}" AutoGenerateColumns="True">
+            <DataGrid.Resources>
+                <col:ArrayList x:Key="Personal">
                         <TextBlock Text="{Binding Surname}" FontSize="16" />
                         <TextBlock Text="{Binding Name}" FontSize="16" />
                         <TextBlock Text="{Binding Patronymic}" FontSize="16" />
                         <TextBlock Text="{Binding Data_birth}" FontSize="16" />
                         <TextBlock Text="{Binding Telephone_number}" FontSize="16" />
                         <TextBlock Text="{Binding Department}" FontSize="16" />
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+                </col:ArrayList>
+            </DataGrid.Resources>
+        </DataGrid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Добавить" Margin="10" Click="Add_Click" />
             <Button Content="Изменить" Margin="10" Click="Edit_Click"  />
             <Button Content="Удалить" Margin="10" Click="Delete_Click"  />
+            <Button Content="Импортировать в excel" Margin="10" Click="Export"  />
+            <Button Content="Импортировать в json" Margin="10" Click="Export"  />
         </StackPanel>
     </Grid>
 </Window>

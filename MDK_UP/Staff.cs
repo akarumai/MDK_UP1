@@ -13,7 +13,7 @@ namespace MDK_UP
         public string? Name { get; set; }
         public string? Patronymic { get; set; }
         public string? Data_birth { get; set; }
-        public int? Telephone_number{ get; set; }
+        public long? Telephone_number{ get; set; }
         public string? Department { get; set; }
     }
 }
