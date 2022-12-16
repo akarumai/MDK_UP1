@@ -3,30 +3,35 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:col="clr-namespace:System.Collections;assembly=System.Runtime"
+
         mc:Ignorable="d" 
-         Title="Staff" Height="623" Width="600">
+         Title="Staff" Height="600" Width="600" ResizeMode="NoResize">
     <Grid Background="#ffdadada">
-        <Border  Background="White" VerticalAlignment="Stretch" Padding="30">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0" />
-            </Border.Effect>
+        <Border  Background="#7d7f7d" VerticalAlignment="Stretch" Padding="20" >
             <StackPanel Margin="0,0,0,40">
-                <TextBlock Text="Отдел кадров" FontWeight="Medium"  FontSize="35"  Margin="0, 0, 0, 10" HorizontalAlignment="Center" />
+                
+
+
+                <TextBlock Text="Отдел кадров" FontWeight="Medium"  FontSize="35"  Margin="0, 0, 0, 10" HorizontalAlignment="Center"  Foreground="White" />
+                
                 <Grid>
-                    <DataGrid Name="usersList" IsReadOnly="True"  Background="White" SelectionChanged="usersList_SelectionChanged" ItemsSource="{Binding}" >
+                    <DataGrid Name="usersList" IsReadOnly="True"  Background="White" SelectionChanged="usersList_SelectionChanged" ItemsSource="{Binding}" AutoGenerateColumns = "false" >
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID Сотрудника" Binding="{Binding Id_staff}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Имя" Binding="{Binding Name}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="День рождения" Binding="{Binding Data_birth}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Дата рождения" Binding="{Binding Data_birth}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Номер телефона" Binding="{Binding Telephone_number}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Отдел" Binding="{Binding Department}"></DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
+                
             </StackPanel>
+            
         </Border>
+        
         <Button Content="Добавить" x:Name="addstaff" Margin="10,0,0,40" Click="Add_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
         <Button Content="Изменить" x:Name="editstaff" Margin="72,0,0,40" Click="Edit_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
         <Button Content="Удалить" x:Name="delstaff" Margin="135,0,0,40" Click="Delete_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" />

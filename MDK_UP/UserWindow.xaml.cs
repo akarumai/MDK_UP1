@@ -16,8 +16,10 @@ namespace MDK_UP
 {
     public partial class UserWindow : Window
     {
-        public Staff Staff { get; private set; }
+
+    public Staff Staff { get; private set; }
         public UserWindow(Staff staff)
+
         {
             InitializeComponent();
             Staff = staff;
@@ -30,6 +32,11 @@ namespace MDK_UP
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
         }
