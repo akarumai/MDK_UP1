@@ -164,3 +164,16 @@ E:\УП 1\MDK_UP\obj\Debug\net6.0-windows\refint\MDK_UP.dll
 E:\УП 1\MDK_UP\obj\Debug\net6.0-windows\MDK_UP.pdb
 E:\УП 1\MDK_UP\obj\Debug\net6.0-windows\MDK_UP.genruntimeconfig.cache
 E:\УП 1\MDK_UP\obj\Debug\net6.0-windows\ref\MDK_UP.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\EPPlus.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\EPPlus.Interfaces.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\EPPlus.System.Drawing.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+E:\УП 1\MDK_UP\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

@@ -31,11 +31,10 @@
             </StackPanel>
             
         </Border>
-        
+
         <Button Content="Добавить" x:Name="addstaff" Margin="10,0,0,40" Click="Add_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
-        <Button Content="Изменить" x:Name="editstaff" Margin="72,0,0,40" Click="Edit_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
-        <Button Content="Удалить" x:Name="delstaff" Margin="135,0,0,40" Click="Delete_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
-        <Button Content="Экспорт в excel" x:Name="exportexcl" Margin="0,0,10,40"  VerticalAlignment="Bottom" HorizontalAlignment="Right" />
-        <Button Content="Экспорт в json" x:Name="exportjson" Margin="0,0,103,40"  VerticalAlignment="Bottom"  HorizontalAlignment="Right"/>
+        <Button Content="Удалить" x:Name="delstaff" Margin="75,0,0,40" Click="Delete_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+        <Button Content="Экспорт в excel" x:Name="exportexcl" Margin="0,0,10,40" Click="CreateExcelfile" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+        <Button Content="Экспорт в json" x:Name="exportjson" Margin="0,0,103,40"  Click="CreateJsonfile" VerticalAlignment="Bottom"  HorizontalAlignment="Right"/>
     </Grid>
 </Window>

@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System.IO;
+using System.Collections;
 
 namespace MDK_UP
 {
@@ -22,6 +25,8 @@ namespace MDK_UP
     public partial class MainWindow : Window
     {
         ApplicationContext db = new ApplicationContext();
+        private string fileName;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,11 +37,11 @@ namespace MDK_UP
         // при загрузке окна
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            // гарантируем, что база данных создана
+            
             db.Database.EnsureCreated();
-            // загружаем данные из БД
+            
             db.Staff.Load();
-            // и устанавливаем данные в качестве контекста
+            
             DataContext = db.Staff.Local.ToObservableCollection();
         }
 
@@ -51,50 +56,12 @@ namespace MDK_UP
                 db.SaveChanges();
             }
         }
-        // редактирование
-        private void Edit_Click(object sender, RoutedEventArgs e)
-        {
-            // получаем выделенный объект
-            Staff? staff = usersList.SelectedItem as Staff;
-            // если ни одного объекта не выделено, выходим
-            if (staff is null) return;
-
-            UserWindow UserWindow = new UserWindow(new Staff
-            {
-                Id_staff = staff.Id_staff,
-                Surname = staff.Surname,
-                Name = staff.Name,
-                Patronymic = staff.Patronymic,
-                Data_birth = staff.Data_birth,
-                Telephone_number = staff.Telephone_number,
-                Department= staff.Department
-            });
-
-            if (UserWindow.ShowDialog() == true)
-            {
-                // получаем измененный объект
-                staff = db.Staff.Find(UserWindow.Staff.Id);
-                if (staff != null)
-                {
-                    staff.Id_staff = UserWindow.Staff.Id_staff;
-                    staff.Surname = UserWindow.Staff.Surname;
-                    staff.Name = UserWindow.Staff.Name;
-                    staff.Patronymic = UserWindow.Staff.Patronymic;
-                    staff.Data_birth = UserWindow.Staff.Data_birth;
-                    staff.Telephone_number = UserWindow.Staff.Telephone_number;
-                    staff.Department = UserWindow.Staff.Department;
-
-                    _ = db.SaveChanges();
-                    usersList.Items.Refresh();
-                }
-            }
-        }
         // удаление
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            // получаем выделенный объект
+            
             Staff? Staff = usersList.SelectedItem as Staff;
-            // если ни одного объекта не выделено, выходим
+            
             if (Staff is null) return;
             db.Staff.Remove(Staff);
             db.SaveChanges();
@@ -103,6 +70,28 @@ namespace MDK_UP
         private void usersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+        private void CreateExcelfile(object sender, RoutedEventArgs e)
+        {
+            Exportexcel ExcelExport = new Exportexcel();
+            ExcelExport.CreateExcelfile(db.Staff.Local.ToObservableCollection());
+        }
+        private void CreateJsonfile(object sender, RoutedEventArgs e)
+        {
+            var Json = JsonConvert.SerializeObject(DataContext);
+            string DRpath = "Reports";
+            if (Directory.Exists(DRpath) == false)
+            {
+                Directory.CreateDirectory(DRpath);
+            }
+            string exportfile = "Report.json";
+            DRpath = System.IO.Path.Combine(DRpath, exportfile);
+            if (File.Exists(DRpath))
+                File.Delete(DRpath);
+            FileStream objFileStrm = File.Create(DRpath);
+            objFileStrm.Close();
+            File.WriteAllText(DRpath, Json.ToString());
+            
         }
     }
 }
