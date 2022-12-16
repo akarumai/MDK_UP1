@@ -6,4 +6,5 @@
 2. 50%(Экспорт)
 3. Документация 0%
 
-![image](https://user-images.githubusercontent.com/98173729/208118768-bce8736c-d025-4b2f-8cfa-113f47ee978b.png)
+![image](https://user-images.githubusercontent.com/98173729/208142896-a66a2e8b-3fa6-41a4-861b-fad805593e66.png)
+
