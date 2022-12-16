@@ -5,3 +5,5 @@
 1. 100% (Отдел кадров) 
 2. 50%(Экспорт)
 3. Документация 0%
+
+![image](https://user-images.githubusercontent.com/98173729/208118768-bce8736c-d025-4b2f-8cfa-113f47ee978b.png)
