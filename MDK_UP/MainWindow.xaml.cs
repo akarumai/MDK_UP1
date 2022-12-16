@@ -61,7 +61,7 @@ namespace MDK_UP
 
             UserWindow UserWindow = new UserWindow(new Staff
             {
-                Id = staff.Id,
+                Id_staff = staff.Id_staff,
                 Surname = staff.Surname,
                 Name = staff.Name,
                 Patronymic = staff.Patronymic,
@@ -76,13 +76,15 @@ namespace MDK_UP
                 staff = db.Staff.Find(UserWindow.Staff.Id);
                 if (staff != null)
                 {
+                    staff.Id_staff = UserWindow.Staff.Id_staff;
                     staff.Surname = UserWindow.Staff.Surname;
                     staff.Name = UserWindow.Staff.Name;
                     staff.Patronymic = UserWindow.Staff.Patronymic;
                     staff.Data_birth = UserWindow.Staff.Data_birth;
                     staff.Telephone_number = UserWindow.Staff.Telephone_number;
                     staff.Department = UserWindow.Staff.Department;
-                    db.SaveChanges();
+
+                    _ = db.SaveChanges();
                     usersList.Items.Refresh();
                 }
             }
@@ -96,6 +98,11 @@ namespace MDK_UP
             if (Staff is null) return;
             db.Staff.Remove(Staff);
             db.SaveChanges();
+        }
+
+        private void usersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

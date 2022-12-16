@@ -28,5 +28,10 @@ namespace MDK_UP
         {
             DialogResult = true;
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

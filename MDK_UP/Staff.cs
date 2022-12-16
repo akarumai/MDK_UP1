@@ -15,5 +15,6 @@ namespace MDK_UP
         public string? Data_birth { get; set; }
         public long? Telephone_number{ get; set; }
         public string? Department { get; set; }
+        public int? Id_staff { get; set; }
     }
 }

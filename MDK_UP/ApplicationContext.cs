@@ -13,7 +13,7 @@ namespace MDK_UP
         public DbSet<Staff> Staff { get; set; } = null!;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=staffjobs.db");
+            optionsBuilder.UseSqlite("Data Source=staffjobes.db");
         }
     }
 }

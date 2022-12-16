@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\МДК УП\\MDK_UP\\MDK_UP\\MDK_UP.csproj": {}
+    "E:\\УП 1\\MDK_UP\\MDK_UP.csproj": {}
   },
   "projects": {
-    "D:\\МДК УП\\MDK_UP\\MDK_UP\\MDK_UP.csproj": {
+    "E:\\УП 1\\MDK_UP\\MDK_UP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\МДК УП\\MDK_UP\\MDK_UP\\MDK_UP.csproj",
+        "projectUniqueName": "E:\\УП 1\\MDK_UP\\MDK_UP.csproj",
         "projectName": "MDK_UP",
-        "projectPath": "D:\\МДК УП\\MDK_UP\\MDK_UP\\MDK_UP.csproj",
-        "packagesPath": "C:\\Users\\kati_\\.nuget\\packages\\",
-        "outputPath": "D:\\МДК УП\\MDK_UP\\MDK_UP\\obj\\",
+        "projectPath": "E:\\УП 1\\MDK_UP\\MDK_UP.csproj",
+        "packagesPath": "C:\\Users\\barab\\.nuget\\packages\\",
+        "outputPath": "E:\\УП 1\\MDK_UP\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\VS SDK\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kati_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\barab\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
