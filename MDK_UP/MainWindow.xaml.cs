@@ -16,6 +16,11 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.IO;
 using System.Collections;
+using System.Data.Entity.Spatial;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace MDK_UP
 {
@@ -66,7 +71,7 @@ namespace MDK_UP
             db.Staff.Remove(Staff);
             db.SaveChanges();
         }
-
+            
         private void usersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -91,7 +96,9 @@ namespace MDK_UP
             FileStream objFileStrm = File.Create(DRpath);
             objFileStrm.Close();
             File.WriteAllText(DRpath, Json.ToString());
-            
         }
+
     }
 }
+
+
