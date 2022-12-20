@@ -101,7 +101,41 @@ namespace MDK_UP
             File.WriteAllText(DRpath, Json.ToString());
         }
 
+        private void info_click(object sender, RoutedEventArgs e)
+        {
+           
+            Staff? user = usersList.SelectedItem as Staff;
+           
+            if (user is null) return;
 
+            UserWindow UserWindow = new UserWindow(new Staff
+            {
+                Id_staff = user.Id_staff,
+                Surname = user.Surname,
+                Name = user.Name,
+                Patronymic=user.Patronymic,
+                Data_birth= user.Data_birth,
+                Telephone_number=user.Telephone_number,
+                Department = user.Department
+            });
+
+            if (UserWindow.ShowDialog() == true)
+            {
+                
+                user = db.Staff.Find(UserWindow.Staff.Id);
+                if (user != null)
+                {
+                    user.Id = UserWindow.Staff.Id;
+                    user.Surname = UserWindow.Staff.Surname;
+                    user.Name = UserWindow.Staff.Name;
+                    user.Patronymic = UserWindow.Staff.Patronymic;
+                    user.Data_birth = UserWindow.Staff.Data_birth;
+                    user.Telephone_number = UserWindow.Staff.Telephone_number;
+                    db.SaveChanges();
+                    usersList.Items.Refresh();
+                }
+            }
+        }
     }
 }
 

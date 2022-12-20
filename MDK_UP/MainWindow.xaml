@@ -73,7 +73,19 @@
 
         </Border>
 
-
+        <Button Content="Информация" x:Name="ifo_add" Margin="199,0,0,40" Click="info_click" VerticalAlignment="Bottom" BorderBrush="#FF151212" >
+            <Button.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+            </Button.Resources>
+            <Button.Background >
+                <LinearGradientBrush EndPoint="0.2,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFFF6557" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
         <Button Content="Добавить" x:Name="addstaff" Margin="62,0,0,40" Click="Add_Click" VerticalAlignment="Bottom" BorderBrush="#FF151212"  >
             <Button.Resources>
                 <Style TargetType="Border">
