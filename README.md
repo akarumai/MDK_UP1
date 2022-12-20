@@ -6,5 +6,7 @@
 2. Экспорт-100%
 3. Документация-100%
 
-![image](https://user-images.githubusercontent.com/98173729/208142896-a66a2e8b-3fa6-41a4-861b-fad805593e66.png)
+![image](https://user-images.githubusercontent.com/98173729/208726769-b8c6de45-2038-4358-9499-c21f560330f4.png)
+![image](https://user-images.githubusercontent.com/98173729/208726812-d6d9b1d1-adb6-4bb0-a76a-4b0e2c3a72ed.png)
+
 
