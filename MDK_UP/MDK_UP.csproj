@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="lNP1PxL7bVilBtvUnZcZUK5e5lt6sGe6kx55odEW.webp" />
+    <None Remove="Untitled-3.jpg" />
+    <None Remove="Untitled-4.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EPPlus" Version="6.1.1" />
     <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
@@ -23,6 +29,13 @@
 
   <ItemGroup>
     <Folder Include="bin\" />
+    <Folder Include="Doc\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="lNP1PxL7bVilBtvUnZcZUK5e5lt6sGe6kx55odEW.webp" />
+    <Resource Include="Untitled-3.jpg" />
+    <Resource Include="Untitled-4.jpg" />
   </ItemGroup>
 
 </Project>

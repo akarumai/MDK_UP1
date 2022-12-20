@@ -21,6 +21,8 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using System.Data.SqlClient;
 using System.Data;
+using System.ComponentModel;
+
 
 namespace MDK_UP
 {
@@ -42,11 +44,11 @@ namespace MDK_UP
         // при загрузке окна
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            
+
             db.Database.EnsureCreated();
-            
+
             db.Staff.Load();
-            
+
             DataContext = db.Staff.Local.ToObservableCollection();
         }
 
@@ -64,14 +66,14 @@ namespace MDK_UP
         // удаление
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            
+
             Staff? Staff = usersList.SelectedItem as Staff;
-            
+
             if (Staff is null) return;
             db.Staff.Remove(Staff);
             db.SaveChanges();
         }
-            
+
         private void usersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -100,5 +102,6 @@ namespace MDK_UP
 
     }
 }
+
 
 

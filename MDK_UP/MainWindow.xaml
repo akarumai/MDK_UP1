@@ -4,19 +4,56 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:col="clr-namespace:System.Collections;assembly=System.Runtime"
         mc:Ignorable="d" 
-         Title="Staff" Height="600" Width="600" ResizeMode="NoResize">
-    <Grid Background="#ffdadada">
+        Title="Staff" Height="700" Width="952" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="left" />
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
 
-        <Border  Background="#7d7f7d" VerticalAlignment="Stretch" Padding="20" >
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="left" />
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+    </Window.Resources>
+
+
+    <Grid Background="#FF464646">
+
+        <StackPanel>
+
+        </StackPanel>
+        <Border  Background="#FFE6E6E6" Margin="20"  VerticalAlignment="Stretch" Padding="30" CornerRadius="40">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="White"/>
+            </Border.Effect>
+
             <StackPanel Margin="0,0,0,40">
 
 
-                <TextBlock Text="Отдел кадров" FontWeight="Medium"  FontSize="35"  Margin="0, 0, 0, 10" HorizontalAlignment="Center"  Foreground="White" />
+                <TextBlock Text="Отдел кадров" FontWeight="Medium"  FontSize="35"  Margin="0,0,0,10" HorizontalAlignment="Left"  Foreground="White" Height="120" Width="852" >
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="/Untitled-4.jpg" Stretch="UniformToFill" TileMode="None">
+                            <ImageBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="-100" CenterX="-100" ScaleX="1" ScaleY="1"/>
+                                    <SkewTransform CenterX="0.5" CenterY="0.9"/>
+                                    <RotateTransform CenterX="0.5" CenterY="0.9"/>
+                                    <TranslateTransform Y="0" X="0"/>
+                                </TransformGroup>
+                            </ImageBrush.RelativeTransform>
+                        </ImageBrush>
+                      
+                    </TextBlock.Background>
 
+                </TextBlock>
 
-                <Grid>
-                    <DataGrid Name="usersList" IsReadOnly="True"  Background="White" SelectionChanged="usersList_SelectionChanged" ItemsSource="{Binding}" AutoGenerateColumns = "false" >
-                        <DataGrid.Columns>
+                <Grid >
+                    <DataGrid Name="usersList" IsReadOnly="True"  SelectionChanged="usersList_SelectionChanged" ItemsSource="{Binding}" AutoGenerateColumns = "false" >
+                        <DataGrid.Columns >
                             <DataGridTextColumn Header="ID Сотрудника" Binding="{Binding Id_staff}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Имя" Binding="{Binding Name}"></DataGridTextColumn>
@@ -32,9 +69,38 @@
 
         </Border>
 
-        <Button Content="Добавить" x:Name="addstaff" Margin="10,0,0,40" Click="Add_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
-        <Button Content="Удалить" x:Name="delstaff" Margin="75,0,0,40" Click="Delete_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
-        <Button Content="Экспорт в excel" x:Name="exportexcl" Margin="0,0,10,40" Click="CreateExcelfile" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
-        <Button Content="Экспорт в json" x:Name="exportjson" Margin="0,0,103,40"  Click="CreateJsonfile" VerticalAlignment="Bottom"  HorizontalAlignment="Right"/>
+        <Button Content="Добавить" x:Name="addstaff" Margin="62,0,0,40" Click="Add_Click" VerticalAlignment="Bottom" BorderBrush="#FF151212">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFFF6557" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Удалить" x:Name="delstaff" Margin="134,0,0,40" Click="Delete_Click" VerticalAlignment="Bottom" BorderBrush="#FF151212" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFFF6557" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Content="Экспорт в excel" x:Name="exportexcl" Margin="0,0,44,40" Click="CreateExcelfile" VerticalAlignment="Bottom" HorizontalAlignment="Right" BorderBrush="#FF151212">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFFF6557" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Экспорт в json" x:Name="exportjson" Margin="0,0,158,40"  Click="CreateJsonfile" VerticalAlignment="Bottom"  HorizontalAlignment="Right" BorderBrush="#FF151212">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFFF6555" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

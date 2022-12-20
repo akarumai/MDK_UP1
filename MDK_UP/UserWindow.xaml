@@ -5,36 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" 
 
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Staffadd" Height="420" Width="400"  ResizeMode="NoResize">
-    <Border Background="#f5f5f5" CornerRadius="10" >
-        <Border MinWidth="350" Margin="0,10,0,0" Background="#7d7f7d" VerticalAlignment="Top" Padding="20" MaxWidth="20" CornerRadius="10" Height="314">
 
+        Title="Staffadd" Height="380" Width="380"  ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="left" />
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        <Setter Property="FontSize" Value="14"/>
+        </Style>
+        
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="left" />
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+    </Window.Resources>
+
+    <Border Background="#FF464646" >
+        <Border MinWidth="350" Margin="0,10,0,0" Background="White" VerticalAlignment="Top" Padding="20" MaxWidth="10" CornerRadius="10" Height="319">
+            
             <Border.Effect>
-                <DropShadowEffect BlurRadius="30" Color="#8B8C7A"/>
+                <DropShadowEffect BlurRadius="30" Color="White"/>
             </Border.Effect>
 
             <StackPanel>
-                <TextBlock  Text="Добавьте сотрудника:" FontSize="20" FontWeight="Medium" Margin="0, 0, 0, 0" HorizontalAlignment="Center" Foreground="White"/>
                 
-                <TextBlock Text="ID"  Foreground="White" FontSize="10"/>
-                <TextBox Text="{Binding Id_staff }" Margin="0,0,0,0"  Width="320"/>
-                <TextBlock Text="Фамилия"  Foreground="White" FontSize="10"/>
-                <TextBox Text="{Binding Surname}"   Width="320"/>
-                <TextBlock Text="Имя"  Foreground="White" FontSize="10"/>
-                <TextBox Text="{Binding Name}"   Width="320" />
-                <TextBlock Text="Отчество" Foreground="White" FontSize="10"/>
-                <TextBox Text="{Binding Patronymic}"   Width="320"/>
-                <TextBlock Text="Дата рождения"  Foreground="White" FontSize="10"/>
-                <TextBox Text="{Binding Data_birth}"  Width="320"/>
-                <TextBlock Text="Номер телефона"  Foreground="White" FontSize="10"/>
-                <TextBox Text="{Binding Telephone_number}" Margin="0,0,0,0"  Width="320"/>
-                <TextBlock Text="Отдел" Margin="0,0,0,0" Foreground="White" FontSize="10"/>
-                <TextBox Text="{Binding Department }"  Margin="0,0,0,0"  Width="320"/>
+                <TextBlock  Text="Добавьте сотрудника:" FontSize="20" FontWeight="Medium" Margin="0, 0, 0, 0" HorizontalAlignment="Center" Foreground="Black" OpacityMask="Black" Width="310" />
+                
+                <TextBlock Text="ID"  Foreground="Black" FontSize="10"/>
+                <TextBox Text="{Binding Id_staff }" Margin="0,0,0,0"  Width="310"/>
+                <TextBlock Text="Фамилия"  Foreground="Black" FontSize="10"/>
+                <TextBox Text="{Binding Surname}"   Width="310"/>
+                <TextBlock Text="Имя"  Foreground="Black" FontSize="10"/>
+                <TextBox Text="{Binding Name}"   Width="310" />
+                <TextBlock Text="Отчество" Foreground="Black" FontSize="10"/>
+                <TextBox Text="{Binding Patronymic}"   Width="310"/>
+                <TextBlock Text="Дата рождения"  Foreground="Black" FontSize="10"/>
+                <TextBox Text="{Binding Data_birth}"  Width="310"/>
+                <TextBlock Text="Номер телефона"  Foreground="Black" FontSize="10"/>
+                <TextBox Text="{Binding Telephone_number}" Margin="0,0,0,0"  Width="310"/>
+                <TextBlock Text="Отдел" Margin="0,0,0,0" Foreground="Black" FontSize="10"/>
+                <TextBox Text="{Binding Department }"  Margin="0,0,0,0"  Width="310"/>
                 
                 <Grid>
-                    <Button IsDefault="True" Content="OK" Margin="0,8,0,8"  Width="50" Click="Accept_Click" HorizontalAlignment="Left" FontSize="10" />
-                    <Button IsCancel="True" Content="Отмена" Margin="0,8,200,8"  Width="50" HorizontalAlignment="Right" FontSize="10" />
+                    <Button IsDefault="True" Content="Oк" Margin="0,8,0,8"  Width="50" Click="Accept_Click" HorizontalAlignment="Left" FontSize="10" BorderBrush="#FF151212" >
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" >
+                                <GradientStop Color="White"/>
+                                <GradientStop Color="#FFFF6557" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button IsCancel="True" Content="Отмена" Margin="0,8,200,8"  Width="50" HorizontalAlignment="Right" FontSize="10" Click="Button_Click" BorderBrush="#FF151212" >
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="White"/>
+                                <GradientStop Color="#FFFF6557" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
                 </Grid>
                 
             </StackPanel>
