@@ -52,7 +52,7 @@ namespace MDK_UP {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MDK_UP;component/userwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MDK_UP;V1.0.0.0;component/userwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\UserWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

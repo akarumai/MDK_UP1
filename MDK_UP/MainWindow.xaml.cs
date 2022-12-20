@@ -33,6 +33,7 @@ namespace MDK_UP
     {
         ApplicationContext db = new ApplicationContext();
         private string fileName;
+        private object dataGridView;
 
         public MainWindow()
         {
@@ -99,6 +100,7 @@ namespace MDK_UP
             objFileStrm.Close();
             File.WriteAllText(DRpath, Json.ToString());
         }
+
 
     }
 }

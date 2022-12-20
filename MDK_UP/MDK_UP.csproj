@@ -8,8 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="lNP1PxL7bVilBtvUnZcZUK5e5lt6sGe6kx55odEW.webp" />
-    <None Remove="Untitled-3.jpg" />
     <None Remove="Untitled-4.jpg" />
   </ItemGroup>
 
@@ -33,8 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="lNP1PxL7bVilBtvUnZcZUK5e5lt6sGe6kx55odEW.webp" />
-    <Resource Include="Untitled-3.jpg" />
     <Resource Include="Untitled-4.jpg" />
   </ItemGroup>
 

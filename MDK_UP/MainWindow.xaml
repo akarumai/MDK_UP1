@@ -36,8 +36,11 @@
             <StackPanel Margin="0,0,0,40">
 
 
-                <TextBlock Text="Отдел кадров" FontWeight="Medium"  FontSize="35"  Margin="0,0,0,10" HorizontalAlignment="Left"  Foreground="White" Height="120" Width="852" >
+
+                <TextBlock Text="Отдел кадров"  FontWeight="Medium"  FontSize="35"  Margin="0,0,0,10" HorizontalAlignment="Left"  Foreground="White" Height="120" Width="852" >
+
                     <TextBlock.Background>
+
                         <ImageBrush ImageSource="/Untitled-4.jpg" Stretch="UniformToFill" TileMode="None">
                             <ImageBrush.RelativeTransform>
                                 <TransformGroup>
@@ -48,11 +51,10 @@
                                 </TransformGroup>
                             </ImageBrush.RelativeTransform>
                         </ImageBrush>
-                      
+
                     </TextBlock.Background>
 
                 </TextBlock>
-
                 <Grid >
                     <DataGrid Name="usersList" IsReadOnly="True"  SelectionChanged="usersList_SelectionChanged" ItemsSource="{Binding}" AutoGenerateColumns = "false" >
                         <DataGrid.Columns >
