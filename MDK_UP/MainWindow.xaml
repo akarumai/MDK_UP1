@@ -22,11 +22,13 @@
 
 
     <Grid Background="#FF464646">
+        
 
         <StackPanel>
 
         </StackPanel>
-        <Border  Background="#FFE6E6E6" Margin="20"  VerticalAlignment="Stretch" Padding="30" CornerRadius="40">
+        <Border  Background="#FFE6E6E6" Margin="20"  VerticalAlignment="Stretch" Padding="30" CornerRadius="40"  >
+            
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="White"/>
             </Border.Effect>
@@ -69,17 +71,28 @@
 
         </Border>
 
-        <Button Content="Добавить" x:Name="addstaff" Margin="62,0,0,40" Click="Add_Click" VerticalAlignment="Bottom" BorderBrush="#FF151212">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+        <Button Content="Добавить" x:Name="addstaff" Margin="62,0,0,40" Click="Add_Click" VerticalAlignment="Bottom" BorderBrush="#FF151212"  >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background >
+                <LinearGradientBrush EndPoint="0.2,1" StartPoint="0.5,0">
                     <GradientStop Color="White"/>
                     <GradientStop Color="#FFFF6557" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
         <Button Content="Удалить" x:Name="delstaff" Margin="134,0,0,40" Click="Delete_Click" VerticalAlignment="Bottom" BorderBrush="#FF151212" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
             <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush EndPoint="0.2,1" StartPoint="0.5,0">
                     <GradientStop Color="White"/>
                     <GradientStop Color="#FFFF6557" Offset="1"/>
                 </LinearGradientBrush>
@@ -87,16 +100,26 @@
         </Button>
 
         <Button Content="Экспорт в excel" x:Name="exportexcl" Margin="0,0,44,40" Click="CreateExcelfile" VerticalAlignment="Bottom" HorizontalAlignment="Right" BorderBrush="#FF151212">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
             <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush EndPoint="0.2,1" StartPoint="0.5,0">
                     <GradientStop Color="White"/>
                     <GradientStop Color="#FFFF6557" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
         <Button Content="Экспорт в json" x:Name="exportjson" Margin="0,0,158,40"  Click="CreateJsonfile" VerticalAlignment="Bottom"  HorizontalAlignment="Right" BorderBrush="#FF151212">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
             <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush EndPoint="0.2,1" StartPoint="0.5,0">
                     <GradientStop Color="White"/>
                     <GradientStop Color="#FFFF6555" Offset="1"/>
                 </LinearGradientBrush>

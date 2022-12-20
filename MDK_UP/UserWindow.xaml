@@ -50,6 +50,11 @@
                 
                 <Grid>
                     <Button IsDefault="True" Content="Oк" Margin="0,8,0,8"  Width="50" Click="Accept_Click" HorizontalAlignment="Left" FontSize="10" BorderBrush="#FF151212" >
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
                         <Button.Background>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" >
                                 <GradientStop Color="White"/>
@@ -58,6 +63,11 @@
                         </Button.Background>
                     </Button>
                     <Button IsCancel="True" Content="Отмена" Margin="0,8,200,8"  Width="50" HorizontalAlignment="Right" FontSize="10" Click="Button_Click" BorderBrush="#FF151212" >
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
                         <Button.Background>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="White"/>
