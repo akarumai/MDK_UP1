@@ -31,7 +31,7 @@
 
             <StackPanel>
                 
-                <TextBlock  Text="Добавьте сотрудника:" FontSize="20" FontWeight="Medium" Margin="0, 0, 0, 0" HorizontalAlignment="Center" Foreground="Black" OpacityMask="Black" Width="310" />
+                <TextBlock  Text="Добавить сотрудника:" FontSize="20" FontWeight="Medium" Margin="0, 0, 0, 0" HorizontalAlignment="Center" Foreground="Black" OpacityMask="Black" Width="310" />
                 
                 <TextBlock Text="ID"  Foreground="Black" FontSize="10"/>
                 <TextBox Text="{Binding Id_staff }" Margin="0,0,0,0"  Width="310"/>
